@@ -3,55 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style/style.css"> 
     <title>AdFriend</title>
 </head>
-<body>
-
-    <h2>AdFriend Settings</h2>
-
-    <!-- Toggle Switch -->
-    <label class="switch">
-        <input type="checkbox" id="toggleAdFriend">
-        <span class="slider"></span>
-    </label>
-    <span id="toggleLabel">Extension Disabled</span>
-
-    <!-- Content Type Selection -->
-    <h3>Select Content Type</h3>
-    <label><input type="radio" name="contentType" value="quotes" checked> Motivational Quotes</label>
-    <label><input type="radio" name="contentType" value="reminders"> Activity Reminders</label>
-
-    <!-- Custom Messages -->
-    <h3>Add Your Own</h3>
-    <input type="text" id="customText" placeholder="Enter your quote/reminder">
-    <button id="addCustom">Add</button>
-
-    <ul id="customList"></ul>
-
-    <br>
-    <button id="save">Save Preferences</button>
-    <button id="refresh">Refresh Page</button>
-
-    <!-- Ad Blocking Settings -->
-    <h3>Select Ad Types to Block</h3>
-    <label><input type="checkbox" id="blockBanners" checked> Block Banner Ads</label>
-    <label><input type="checkbox" id="blockVideos" checked> Block Video Ads</label>
-    <label><input type="checkbox" id="blockPopups" checked> Block Popups</label>
-    <button id="saveAdSettings">Save Ad Preferences</button>
-
-    <!-- Reminder Frequency -->
-    <h3>Set Reminder Frequency</h3>
-    <label for="reminderInterval">Remind me every:</label>
-    <select id="reminderInterval">
-        <option value="30">30 minutes</option>
-        <option value="60" selected>1 hour</option>
-        <option value="120">2 hours</option>
-        <option value="180">3 hours</option>
-    </select>
-    <button id="saveReminderSettings">Save Reminder Settings</button>
-
-    <script src="popup.js"></script>
-
-</body>
+<html>
+    <body>
+        <div class="container">
+            <h2>AdFriend Settings</h2>
+    
+            <fieldset>
+                <legend><strong>Enable/Disable Extension</strong></legend>
+                <label class="flex-container">
+                    <span>Extension</span>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleAdFriend">
+                        <span class="slider"></span>
+                    </label>
+                    <span id="toggleLabel">Disabled</span>
+                </label>
+            </fieldset>
+    
+            <fieldset>
+                <legend><strong>Replacement Content Type</strong></legend>
+                <label><input type="radio" name="contentType" value="quotes" checked> Motivational Quotes</label>
+                <label><input type="radio" name="contentType" value="reminders"> Activity Reminders</label>
+            </fieldset>
+    
+            <fieldset>
+                <legend><strong>Add Your Own Content</strong></legend>
+                <input type="text" id="customText" placeholder="Enter your quote/reminder">
+                <button id="addCustom">Add</button>
+                <ul id="customList"></ul>
+            </fieldset>
+    
+            <div class="flex-container">
+                <button id="save">Save Preferences</button>
+                <button id="refresh">Refresh Page</button>
+            </div>
+    
+            <fieldset>
+                <legend><strong>Ad Blocking Settings</strong></legend>
+                <label><input type="checkbox" id="blockBanners" checked> Block Banner Ads</label>
+                <label><input type="checkbox" id="blockVideos" checked> Block Video Ads</label>
+                <label><input type="checkbox" id="blockPopups" checked> Block Popups</label>
+                <button id="saveAdSettings">Save Ad Preferences</button>
+            </fieldset>
+    
+            <fieldset>
+                <legend><strong>Set Reminder Frequency</strong></legend>
+                <label for="reminderInterval">Remind me every:</label>
+                <select id="reminderInterval">
+                    <option value="30">30 minutes</option>
+                    <option value="60" selected>1 hour</option>
+                    <option value="120">2 hours</option>
+                    <option value="180">3 hours</option>
+                </select>
+                <button id="saveReminderSettings">Save Reminder Settings</button>
+            </fieldset>
+        </div>
+    
+        <script src="popup.js"></script>
+    </body>
+    
 </html>

@@ -1,0 +1,131 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: left;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+/* Labels & Inputs */
+label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* Checkboxes and Radio Buttons */
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Text Input */
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Flexbox Layout */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}

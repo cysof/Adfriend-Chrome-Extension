@@ -3,10 +3,11 @@
     "name": "AdFriend",
     "version": "1.0",
     "description": "Replace ads with motivational quotes and reminders.",
-    "permissions": ["webRequest", "webRequestBlocking", "storage", "declarativeNetRequest"],
+    "permissions": ["declarativeNetRequest", "alarms", "notifications", "storage", "declarativeNetRequestWithHostAccess"],
     "host_permissions": ["<all_urls>"],
     "background": {
       "service_worker": "background.js"
+      
     },
     "action": {
       "default_popup": "popup.html",
