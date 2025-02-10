@@ -1,3 +1,11 @@
+function getRandomFromList(list) {
+    if (!Array.isArray(list) || list.length === 0) {
+        return "No custom entries available"; // Default fallback message
+    }
+    const randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
+}
+
 async function checkAdsUsingAPI(elements) {
     let elementsHTML = elements.map(el => el.outerHTML);
 
